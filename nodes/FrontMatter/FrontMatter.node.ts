@@ -42,6 +42,7 @@ export class FrontMatter implements INodeType {
 					data: result.data,
 					matter: result.matter,
 					content: result.content,
+					text: text,
 				},
 			});
 		}
