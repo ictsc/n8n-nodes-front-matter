@@ -1,6 +1,6 @@
 {
   "name": "@icttroacon/n8n-nodes-front-matter",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "n8n nodes for front matter",
   "keywords": [
     "n8n-community-node-package"
