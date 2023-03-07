@@ -1,5 +1,6 @@
 import { INodeExecutionData, INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { IExecuteFunctions } from 'n8n-core';
+
 import matter from 'gray-matter';
 
 export class FrontMatter implements INodeType {
