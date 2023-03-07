@@ -30,17 +30,21 @@ export class FrontMatter implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const returnData: INodeExecutionData[] = [];
 
-		const text = this.getNodeParameter('text', 0) as string;
+		const items = this.getInputData();
+		const length = items.length;
+		for (let i = 0; i < length; i++) {
+			const text = this.getNodeParameter('text', i) as string;
 
-		const result = matter(text);
+			const result = matter(text);
 
-		returnData.push({
-			json: {
-				data: result.data,
-				matter: result.matter,
-				content: result.content,
-			},
-		});
+			returnData.push({
+				json: {
+					data: result.data,
+					matter: result.matter,
+					content: result.content,
+				},
+			});
+		}
 
 		return [returnData];
 	}
